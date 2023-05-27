@@ -1,0 +1,212 @@
+/*product*/
+.back-button{
+  margin-top: 100px;
+  margin-left: 70px;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+.buttons{
+  text-decoration: none;
+  color: #000;
+}
+
+.container{
+  max-width: 80%;
+  margin-bottom: 10%;
+  padding: 15px;
+  display: flex;
+  background-color: transparent;
+}
+.left-column{
+  width: 55%;
+  position: relative;
+  margin-right: 15px;
+}
+.left-column img{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.left-column img.active{
+  opacity: 1;
+  position: relative;
+}
+
+.right-column{
+    width: 45%;
+    position: relative;
+}
+
+.product-description{
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 20px;
+}
+.product-description span{
+    font-size: 15px;
+    color: #000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.product-description h1{
+    font-weight: 500;
+    font-size: 52px;
+    color: #000;
+    letter-spacing: -2px;
+}
+.product-description p{
+    font-size: 12px;
+    font-weight: 300;
+    color: #000;
+    line-height: 20px;
+}
+.slug-button{
+  text-decoration: underline;
+  color: #000;
+}
+/* Product Color */
+.product-color {
+    margin-bottom: 20px;
+}
+.product-color span{
+  font-size: 16px;
+  font-weight: 500;
+}
+.color-choose div {
+  margin-top: 5px;
+  display: inline-block;
+}
+   
+  .color-choose input[type=radio] {
+    display: none;
+  }
+   
+  .color-choose input[type=radio] + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+   
+  .color-choose input[type="radio"] + label span {
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+  }
+   
+  .color-choose input[type="radio"]#red + label span {
+    background-color: #C91524;
+  }
+  .color-choose input[type="radio"]#blue + label span {
+    background-color: #314780;
+  }
+  .color-choose input[type="radio"]#black + label span {
+    background-color: #323232;
+  }
+   
+  .color-choose input[type="radio"]:checked + label span {
+    background-image: url(../assets/jjjjound-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+/* Product Size */
+.product-size {
+  margin-bottom: 20px;
+}
+.product-size span{
+  font-size: 16px;
+  font-weight: 500;
+}
+.size-choose div{
+  display: inline-block;
+  margin-top: 5px;
+}
+ 
+.size-choose input[type=button] {
+  display: none;
+}
+
+.size-choose input[type=button] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #f4efe9;
+  margin: 0 0 0 0;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 1px #000;
+}
+
+.size-choose input[type="button"] + label span:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+  /* Product Price */
+.product-price {
+    display: flex;
+    align-items: center;
+  }
+  .product-price span {
+    font-size: 26px;
+    font-weight: 500;
+    color: #000;
+    margin-right: 20px;
+  }
+  .addtocart-btn {
+    display: inline-block;
+    background-color: #f4efe9;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+  }
+  .addtocart-btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  /* Responsive */
+@media (max-width: 940px) {
+    .container {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+    .right-column{
+      margin-top: 60px;
+    }
+   
+    .left-column,
+    .right-column {
+      width: 100%;
+    }
+   
+    .left-column img {
+      width: 100%;
+      right: 0;
+      top: 10px;
+      left: initial;
+    }
+  }
+   
+  @media (max-width: 535px) {
+    .left-column img {
+      width: 100%;
+    }
+  }

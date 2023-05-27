@@ -1,0 +1,67 @@
+/*posts*/
+.top-button{
+    margin-top: 100px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.buttons{
+    text-decoration: none;
+    color: #000;
+}
+
+.container{
+    transition: all .2s linear;
+    background-color: transparent;
+    margin-bottom: 70px;
+}
+
+.container .title{
+    font-size: 20px;
+    color: #000;
+    margin-top: 40px ;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container .product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 40px;
+}
+
+.container .product-container .product-card{
+    text-align: center;
+    background-color: none;
+    text-decoration: none;
+}
+
+.container .product-container .product-card:hover{
+  transform: scale(1.025);
+}
+
+.container .product-container .product-card img{
+    height: 300px;
+    max-width: 200px;
+}
+
+.container .product-container .product{
+  text-decoration: none;
+  color: #000;
+}
+
+.container .product-container .product h3{
+    font-size: 18px;
+}
+
+.container .product-container .product .price{
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 1200px){
+.container .product-container {
+    margin-bottom: 0;
+}
+}

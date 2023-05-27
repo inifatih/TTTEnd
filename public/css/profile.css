@@ -1,0 +1,198 @@
+/*profile*/
+/*Accoount*/
+section{
+    margin: 8% 0 10%;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+  ::selection{
+    color: #fff;
+    background: #5372F0;
+  }
+
+.account-section {
+    transition: height 0.3s ease;
+    height: 65vh;
+    overflow: hidden;
+}
+
+/* wrapper */
+.wrapper{
+    width: 450px;
+    padding: 40px 30px 50px 30px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+  }
+
+
+/* Tittle */
+.wrapper .title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Button */
+.nav-text {
+    display: flex;
+    justify-content: center;
+  }
+  
+.nav-text button {
+    border: none;
+    padding: 15px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 10px;
+    text-decoration: none; /* hilangkan underline */
+}
+.nav-text button a {
+    color: #000;
+    text-decoration: none;
+}
+.nav-text .profileBar button a {
+    color: black;
+    text-decoration: underline;
+}
+.nav-text a:hover {
+    text-decoration: underline; /* tambahkan underline saat hover */
+}
+
+
+
+
+/* Data */
+.profilAkun {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.profilAkun .textDataDiri {
+  text-align: center;
+  padding: 5px;
+}
+.wrapper .profilAkun{
+    text-align: left;
+    font-size: 13px;
+}
+
+/* Form */
+.wrapper form{
+    margin: 40px 0;
+}
+form .field{
+    width: 100%;
+    margin-bottom: 20px;
+}
+form .formField label{
+    font-size: 13px;
+    display: block;
+    text-align: left;
+}
+
+.formField input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 5px 20px;
+    font-size: 13px;
+    background: none;
+    caret-color: #5372F0;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
+}
+
+.formField input[type="submit"]{
+    height: 50px;
+    margin-top: 30px;
+    font-size: 18px;
+    color:#000;
+    padding: 0;
+    border: none;
+    background: #f4efe9;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+  
+.formField input[type="submit"]:hover{
+    background: #000;
+    color: #f4efe9;
+}
+
+.hidden {
+    display: none;
+  }
+.formField {
+    margin-bottom: 10px;
+}
+
+/* Add New Address */
+.field input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 5px 20px;
+    font-size: 14px;
+    background: none;
+    caret-color: #5372F0;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
+}
+.field input[type="submit"]{
+    height: 50px;
+    margin-top: 30px;
+    font-size: 18px;
+    color:#000;
+    padding: 0;
+    border: none;
+    background: #f4efe9;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.field input[type="submit"]:hover{
+    background: #000;
+    color: #f4efe9;
+}
+
+/*logout*/
+.logoutbar button{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 5px 20px;
+    font-size: 14px;
+    background: none;
+    caret-color: #5372F0;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
+}
+.logoutbar button[type="submit"]{
+    height: 50px;
+    font-size: 18px;
+    color:#000;
+    padding: 0;
+    border: none;
+    background: #f4efe9;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.logoutbar button[type="submit"]:hover{
+    background: #000;
+    color: #f4efe9;
+}

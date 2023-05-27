@@ -1,0 +1,83 @@
+/*order*/
+/*Accoount*/
+section{
+    margin: 3% 0 10%;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+  ::selection{
+    color: #fff;
+    background: #5372F0;
+  }
+
+.account-section {
+    transition: height 0.3s ease;
+    height: 65vh;
+    overflow: hidden;
+}
+
+/* wrapper */
+.wrapper{
+    width: 450px;
+    padding: 40px 30px 50px 30px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+  }
+
+
+/* Tittle */
+.wrapper .title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Button */
+.nav-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+.nav-text button {
+    border: none;
+    padding: 15px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 10px;
+    text-decoration: none; /* hilangkan underline */
+}
+.nav-text button a {
+    color: #000;
+    text-decoration: none;
+}
+.nav-text .orderBar button a {
+    color: black;
+    text-decoration: underline;
+}
+.nav-text a:hover {
+    text-decoration: underline; /* tambahkan underline saat hover */
+}
+
+
+/* Data */
+.orderHistory {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.orderHistory .info {
+  text-align: center;
+  padding: 5px;
+}
+.wrapper .orderHistory{
+    text-align: left;
+    font-size: 13px;
+}
