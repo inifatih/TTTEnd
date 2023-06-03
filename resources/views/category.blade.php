@@ -2,7 +2,7 @@
 @section('container')
 <link rel="stylesheet" href="{{asset('css/posts.css')}}">
     <section class="product">    
-    <div class="top-button"><a class="buttons" href="/shop">Back to Shop</a>  
+    <div class="top-button"><a class="buttons" href="/posts">Back to Shop</a>  
         <div class="container">
             <h3 class="title">Product : {{ $category }}</h3>
 

@@ -1,8 +1,8 @@
-@extends('layouts/main')
+@extends('layouts.main')
 @section('container')
 <link rel="stylesheet" href="{{asset('css/posts.css')}}">
     <section class="product">
-    <div class="back-button"><a href="/shop">Back to Shop</a>
+    <div class="top-button"><a class="buttons" href="/posts">Back to Shop</a>
         </div>
         <div class="container">
             <h3 class="title">Section</h3>

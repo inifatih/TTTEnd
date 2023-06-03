@@ -2,7 +2,7 @@
 @section('container')
 <link rel="stylesheet" href="{{asset('css/post.css')}}">
     <section>
-    <div class="back-button"><a class="buttons" href="/shop">Back to Shop</a></div>
+    <div class="back-button"><a class="buttons" href="/posts">Back to Shop</a></div>
         <main class="container">
             <div class="left-column">
                 <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}">

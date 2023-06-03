@@ -53,23 +53,13 @@
           </div>
         </div>
     </header>
+    
     <div class="cart-sidebar">
         <span class="close-icon"><img src="{{ asset('img/close-icon.svg') }}" alt=""></span>
       <div class="cart-title">
         <h4>CART (2)</h4>
       </div>
       <div class="cart-body">
-
-        <div class="cart-item">
-          <div class="img">
-            <img src="img/jjjjound-1.png" alt="">
-          </div>
-          <div class="text">
-            <span>1x</span>
-            <h5>T-Shirt</h5>
-            <h5 class="color-primary">$148</h5>
-          </div>
-        </div>
 
         <div class="cart-item">
           <div class="img">
