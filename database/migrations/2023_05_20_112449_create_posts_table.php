@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('section_id');
             $table->string('title');
             $table->string('slug')->unique();
+            $table->string('image')->nullable();
             $table->text('desc');
             $table->integer('price');
             $table->timestamp('published_at')->nullable();

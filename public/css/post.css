@@ -13,6 +13,7 @@
 
 .container{
   max-width: 80%;
+  margin-top: 20px;
   margin-bottom: 10%;
   padding: 15px;
   display: flex;
@@ -22,18 +23,13 @@
   width: 55%;
   position: relative;
   margin-right: 15px;
+  margin-bottom: 30px;
 }
 .left-column img{
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-.left-column img.active{
-  opacity: 1;
+  max-width: 100%;
+  margin-bottom: 20px;
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .right-column{
@@ -67,93 +63,6 @@
 .slug-button{
   text-decoration: underline;
   color: #000;
-}
-/* Product Color */
-.product-color {
-    margin-bottom: 20px;
-}
-.product-color span{
-  font-size: 16px;
-  font-weight: 500;
-}
-.color-choose div {
-  margin-top: 5px;
-  display: inline-block;
-}
-   
-  .color-choose input[type=radio] {
-    display: none;
-  }
-   
-  .color-choose input[type=radio] + label span {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: -1px 4px 0 0;
-    vertical-align: middle;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-   
-  .color-choose input[type="radio"] + label span {
-    border: 2px solid #FFFFFF;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
-  }
-   
-  .color-choose input[type="radio"]#red + label span {
-    background-color: #C91524;
-  }
-  .color-choose input[type="radio"]#blue + label span {
-    background-color: #314780;
-  }
-  .color-choose input[type="radio"]#black + label span {
-    background-color: #323232;
-  }
-   
-  .color-choose input[type="radio"]:checked + label span {
-    background-image: url(../assets/jjjjound-2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-/* Product Size */
-.product-size {
-  margin-bottom: 20px;
-}
-.product-size span{
-  font-size: 16px;
-  font-weight: 500;
-}
-.size-choose div{
-  display: inline-block;
-  margin-top: 5px;
-}
- 
-.size-choose input[type=button] {
-  display: none;
-}
-
-.size-choose input[type=button] + label span {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background-color: #f4efe9;
-  margin: 0 0 0 0;
-  cursor: pointer;
-  text-align: center;
-  padding: 5px 5px;
-  border-radius: 3px;
-  font-size: 16px;
-  font-weight: 400;
-  color: #000;
-  text-decoration: none;
-  transition: 0.3s ease;
-  box-shadow: 1px #000;
-}
-
-.size-choose input[type="button"] + label span:hover{
-  background-color: #000;
-  color: #fff;
 }
 
   /* Product Price */

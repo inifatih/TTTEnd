@@ -16,7 +16,7 @@
         <style>
           @media (max-width: 1040px){
             .menu-btn{
-            background: url("img/fries-menu-icon.svg")no-repeat;
+            background: url("{{ asset('img/fries-menu-icon.svg') }}") no-repeat;
             color: #000;
             border-radius: 10%;
             background-size: 30px;
@@ -28,7 +28,7 @@
           }
           .menu-btn.active{
             z-index: 999;
-            background: url("img/close-icon.png")no-repeat;
+            background: url("{{ asset('img/close-icon.png') }}")no-repeat;
             background-size: 25px;
             background-position: center;
             transition: 0.3s ease;
@@ -39,7 +39,7 @@
       <div class="navigation">
         <div class="navigation-items">
           <input class="search" type="text" name="search" placeholder="Search...">
-          <a href="/shop" >SHOP</a>
+          <a href="/posts" >SHOP</a>
           <a href="/help" >HELP</a>
           @auth
             <a href="/profile">{{ auth()->user()->username }}</a>
@@ -54,7 +54,7 @@
         </div>
     </header>
     <div class="cart-sidebar">
-        <span class="close-icon"><img src="img/close-icon.svg" alt=""></span>
+        <span class="close-icon"><img src="{{ asset('img/close-icon.svg') }}" alt=""></span>
       <div class="cart-title">
         <h4>CART (2)</h4>
       </div>

@@ -19,7 +19,7 @@
                 @foreach ($posts as $post)
                 <a href="/posts/{{ $post->slug }}" class="product-card">
                   <div class="product" data-name="p-1">
-                    <img src="img/jjjjound-1.png" alt="">
+                    <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}">
                     <h3>{{ $post->title }}</h3>
                     <div class="price">
                       Rp {{ $post->price }}
