@@ -14,4 +14,7 @@ class Section extends Model
     public function posts(){
         return $this->hasMany(Post::class);
     }
+    public function contents(){
+        return $this->hasMany(Content::class);
+    }
 }

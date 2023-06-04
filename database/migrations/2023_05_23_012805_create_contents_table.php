@@ -16,8 +16,10 @@ return new class extends Migration
             $table->foreignId('category_id')->nullable();
             $table->foreignId('section_id')->nullable();
             $table->string('title');
+            $table->string('image')->nullable();
             $table->string('desc');
             $table->string('slug');
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
     }

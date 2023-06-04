@@ -15,4 +15,8 @@ class Content extends Model
     {
         return $this->belongsTo(Category::class);
     }
+    public function section()
+    {
+        return $this->belongsTo(Section::class);
+    }
 }

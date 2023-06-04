@@ -12,6 +12,10 @@
               <span data-feather="file" class="align-text-bottom"></span>
               My Posts
             </a>
+            <a class="nav-link {{ Request::is('dashboard/contents*') ? 'active' : '' }}" href="/dashboard/contents">
+              <span data-feather="file" class="align-text-bottom"></span>
+              My Contents
+            </a>
           </li>
         </ul>
     </div>

@@ -9,14 +9,14 @@
       <img class="img-slide" src="img/pexels-streetwear.jpg" ></img> -->
       @foreach ($contents as $key => $content)
         @if($key === 0)
-          <img class="img-slide active" src="img\pexels-women.jpg" ></img>
+          <img class="img-slide active" src="{{ asset('storage/' . $content->image) }}" alt="{{ $content->slug }}"></img>
           <div class="content active">
           <h1>{{ $content->title }}<br></h1>
           <p>{{ $content->desc }}</p>
           <a href="/categories/{{ $content->slug }}">Read More</a>
         </div>
         @else
-        <img class="img-slide" src="img\pexels-women.jpg" ></img>
+        <img class="img-slide" src="{{ asset('storage/' . $content->image) }}" alt="{{ $content->slug }}"></img>
         <div class="content">
           <h1>{{ $content->title }}<br></h1>
           <p>{{ $content->desc }}</p>
