@@ -3,17 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Post;
 use App\Http\Requests\StoreCartRequest;
 use App\Http\Requests\UpdateCartRequest;
+use Clockwork\Request\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+     public function index()
     {
-        //
+        return view('cart.index');
     }
 
     /**
@@ -27,9 +30,14 @@ class CartController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCartRequest $request)
+    public function store(Request $request)
     {
-        //
+        Cart::create([
+            'user_id' => Auth::user()->id,
+            // 'post_id' => $request->post_id,
+            'qty' => 1
+        ]);
+        return redirect('/main');
     }
 
     /**

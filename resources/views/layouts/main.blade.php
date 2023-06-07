@@ -46,7 +46,7 @@
           @else
             <a href="/login" >LOGIN</a>
           @endauth
-          <a class="cart-btn" href="#">
+          <a class="cart-btn" href="/cart">
             <i class="fa fa-shopping-bag" ></i>
             <span>(2)</span>
           </a>
@@ -54,7 +54,7 @@
         </div>
     </header>
     
-    <div class="cart-sidebar">
+    <!-- <div class="cart-sidebar">
         <span class="close-icon"><img src="{{ asset('img/close-icon.svg') }}" alt=""></span>
       <div class="cart-title">
         <h4>CART (2)</h4>
@@ -74,7 +74,7 @@
 
         <a class="btn" href="#">CHECKOUT</a>
       </div>
-    </div>
+    </div> -->
     
     @yield('container')
 
@@ -126,18 +126,18 @@
       navigation.classList.toggle("active");
     });
 
-    //JS for CART SIDEBAR   
-    var cart_btn = document.querySelector(".cart-btn");
-    var cart_sidebar = document.querySelector(".cart-sidebar");
-    var close_icon = document.querySelector(".close-icon");
+    // //JS for CART SIDEBAR   
+    // var cart_btn = document.querySelector(".cart-btn");
+    // var cart_sidebar = document.querySelector(".cart-sidebar");
+    // var close_icon = document.querySelector(".close-icon");
 
-    cart_btn.onclick = function(){
-      cart_sidebar.style.right = "0px";
-    }
+    // cart_btn.onclick = function(){
+    //   cart_sidebar.style.right = "0px";
+    // }
 
-    close_icon.onclick = function(){
-      cart_sidebar.style.right = "-400px";
-    }
+    // close_icon.onclick = function(){
+    //   cart_sidebar.style.right = "-400px";
+    // }
     </script>
   </body>
 </html>

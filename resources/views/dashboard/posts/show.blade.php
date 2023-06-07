@@ -19,11 +19,11 @@
         <h3>{{ $post->section->name }}</h3>
         <h1 class="mb-5">{{ $post->title }}</h1>
         <p><a class="slug-button" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
-        <p>{{ $post->desc }}</p>
+        <body>{{ $post->desc }}</body>
     </div>
     <div class="product-configuration">
         <div class="product-price">
-            <span>Rp {{ $post->price }}</span>
+            <span>IDR {{ $post->price }}</span>
         </div>
     </div>
 </main>

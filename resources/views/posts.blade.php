@@ -22,7 +22,7 @@
                     <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}">
                     <h3>{{ $post->title }}</h3>
                     <div class="price">
-                      Rp {{ $post->price }}
+                      IDR {{ $post->price }}
                     </div>
                   </div>
                 </a>

@@ -104,6 +104,18 @@ Route::get('/help', function () {
     ]);
 });
 
+Route::get('/cart', function () {
+    return view('cart', [
+        "title" => "Cart"
+    ]);
+})->middleware('auth');
+
+Route::get('/checkout', function () {
+    return view('checkout');
+})->middleware('auth');
+
+
+
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);

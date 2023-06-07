@@ -17,8 +17,15 @@
                 </div>
                 <div class="product-configuration">
                     <div class="product-price">
-                        <span>Rp {{ $post->price }}</span>
-                        <button href="#" class="addtocart-btn">Add to cart</button>
+                        <span>IDR {{ $post->price }}</span>
+                    <form action="/main" method="post">
+                        @csrf
+                        <input type="hidden" value="{{ $post->id }}" name="post_id">
+                        <button type="submit" value="addtocart" class="addtocart-btn">Add to cart</button>
+
+
+                    </form>
+
                     </div>
                 </div>
         </main>
