@@ -2,7 +2,7 @@
 @section('container')
 <link rel="stylesheet" href="{{asset('css/post.css')}}">
     <section>
-    <div class="back-button"><a class="buttons" href="/posts">Back to Shop</a></div>
+    <div class="back-button"><a class="buttons" href="/posts"><i class="fa fa-arrow-left"></i> Back to Shop</a></div>
         <main class="container">
             <div class="left-column">
                 <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}">
@@ -18,14 +18,7 @@
                 <div class="product-configuration">
                     <div class="product-price">
                         <span>IDR {{ $post->price }}</span>
-                    <form action="/main" method="post">
-                        @csrf
-                        <input type="hidden" value="{{ $post->id }}" name="post_id">
-                        <button type="submit" value="addtocart" class="addtocart-btn">Add to cart</button>
-
-
-                    </form>
-
+                        <a href="{{ route('add_to_cart', $post->id) }}" class="addtocart-btn" class="text-decoration-none" role="button">Add to cart</a>
                     </div>
                 </div>
         </main>

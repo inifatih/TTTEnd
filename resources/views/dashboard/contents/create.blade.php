@@ -66,8 +66,11 @@
             @error('desc')
                 <p class="text-danger" >{{ $message }}</p>
             @enderror
-            <input id="desc" type="hidden" name="desc" required value="{{ old('desc')}}">
-            <trix-editor input="desc"></trix-editor>
+            <input type="text" class="form-control @error('desc') is-invalid @enderror" id="desc" name="desc" required autofocus value="{{ old('desc') }}">
+            <!-- <input id="desc" type="hidden" name="desc" required value="{{ old('desc') }}">
+            <trix-editor input="desc">
+                
+            </trix-editor> -->
         </div>
     <button type="submit" value="submit" class="btn btn-primary mt-3">Create Content</button>
     </form>

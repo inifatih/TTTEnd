@@ -47,8 +47,8 @@
             <a href="/login" >LOGIN</a>
           @endauth
           <a class="cart-btn" href="/cart">
-            <i class="fa fa-shopping-bag" ></i>
-            <span>(2)</span>
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            <span class="badge badge-pill badge-danger">({{ count((array) session('cart')) }})</span>
           </a>
           </div>
         </div>

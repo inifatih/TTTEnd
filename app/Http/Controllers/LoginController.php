@@ -21,9 +21,11 @@ class LoginController extends Controller
         ]);
         
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('/');
-        } else {
-         
+            if(Auth::user()->is_admin){
+                return view('dashboard.index');
+            } else {
+                return redirect('/');
+            }
         }
 
         return back()->with('loginError', 'Oops, Login Failed!');

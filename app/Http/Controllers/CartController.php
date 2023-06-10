@@ -15,9 +15,13 @@ class CartController extends Controller
      * Display a listing of the resource.
      */
      public function index()
-    {
-        return view('cart.index');
+     {
+        $user = Auth::user();
+        $cart = Cart::where('user_id', $user->id)->first();
+
+        return view('cart', compact('cart'));
     }
+
 
     /**
      * Show the form for creating a new resource.

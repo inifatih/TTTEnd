@@ -125,9 +125,13 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', function(){
     return view('dashboard.index');
-})->middleware('auth');
+})->middleware('admin');
 
-Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
+Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('admin');
 
-Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
-Route::resource('/dashboard/contents', DashboardContentController::class)->middleware('auth');
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('admin');
+Route::resource('/dashboard/contents', DashboardContentController::class)->middleware('admin');
+
+Route::get('add-to-cart/{post:id}', [PostController::class, 'addToCart'])->name('add_to_cart');
+Route::patch('update-cart', [PostController::class, 'update'])->name('update_cart');
+Route::delete('remove-from-cart', [PostController::class, 'remove'])->name('remove_from_cart');
