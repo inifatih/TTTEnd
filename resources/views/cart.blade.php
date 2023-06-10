@@ -3,11 +3,31 @@
 <link href="{{ asset('boots/css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 <script src="{{ asset('boots/js/bootstrap.bundle.min.js') }}" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<style>
+.top-button{
+    margin-top: 100px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
 
+.buttons{
+    text-decoration: none;
+    color: #000;
+}
+
+@media only screen and (max-width: 1200px){
+.top-button{
+    margin-left:0;
+}
+}
+</style>
 <section>
+    <div class="top-button">
+        <a class="buttons" href="/posts" > <i class="fa fa-arrow-left"></i> Back to Shop</a>
+    </div>
     <div class="container py-5 mt-5 bg-transparent">
         <h3 class="text-center">Cart</h3>
-        <a href="{{ url('/posts') }}" class="text-decoration-none"> <i class="fa fa-arrow-left"></i>Back to Shop</a>
     </div>
   <div class="container h-100 mt-3 bg-transparent">
     <table id="cart" class="table table-hover table-condensed">
@@ -51,9 +71,9 @@
                 <td colspan="5" class="text-right"><h3><strong>Total ${{ $total }}</strong></h3></td>
             </tr>
         </tfoot>
-    </table>
-  </div>
-  <div class="container py-5 bg-transparent">
+        </table>
+    </div>
+    <div class="container py-5 bg-transparent">
     <div class="order-md-1">
         <h4 class="mb-3">Billing address</h4>
         <form class="needs-validation" novalidate>
@@ -124,9 +144,8 @@
                 Checkout
             </button>
         </form>
-      </form>
     </div>
-  </div>
+    </div>
     </div>
   </div>
 </section>   

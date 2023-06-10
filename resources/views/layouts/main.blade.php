@@ -38,7 +38,7 @@
       </div>
       <div class="navigation">
         <div class="navigation-items">
-          <input class="search" type="text" name="search" placeholder="Search...">
+          <!-- <input class="search" type="text" name="search" placeholder="Search..."> -->
           <a href="/posts" >SHOP</a>
           <a href="/help" >HELP</a>
           @auth

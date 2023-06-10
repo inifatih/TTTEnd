@@ -13,14 +13,14 @@
           <div class="content active">
           <h1>{{ $content->title }}<br></h1>
           <p>{{ $content->desc }}</p>
-          <a href="/categories/{{ $content->slug }}">Read More</a>
+          <a href="/categories/{{ $content->slug }}">View More</a>
         </div>
         @else
         <img class="img-slide" src="{{ asset('storage/' . $content->image) }}" alt="{{ $content->slug }}"></img>
         <div class="content">
           <h1>{{ $content->title }}<br></h1>
           <p>{{ $content->desc }}</p>
-          <a href="/categories/{{ $content->slug }}">Read More</a>
+          <a href="/categories/{{ $content->slug }}">View More</a>
         </div>
         @endif
       @endforeach
