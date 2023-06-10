@@ -29,14 +29,14 @@
     <div class="container py-5 mt-5 bg-transparent">
         <h3 class="text-center">Cart</h3>
     </div>
-  <div class="container h-100 mt-3 bg-transparent">
+    <div class="container h-100 mt-3 bg-transparent">
     <table id="cart" class="table table-hover table-condensed">
         <thead>
             <tr>
-                <th style="width:50%">Product Name</th>
-                <th style="width:10%">Price</th>
-                <th style="width:8%">Quantity</th>
-                <th style="width:22%" class="text-center">Subtotal</th>
+                <th style="width:50%"><h5><strong>Name</strong></h5></th>
+                <th style="width:10%"><h5><strong>Price</strong></h5></th>
+                <th style="width:8%"><h5><strong>Quantity</strong></h5></th>
+                <th style="width:22%" class="text-center"><h5><strong>Name</strong></h5></th>
                 <th style="width:10%"></th>
             </tr>
         </thead>
@@ -54,11 +54,11 @@
                                 </div>
                             </div>
                         </td>
-                        <td data-th="Price">${{ $details['price'] }}</td>
+                        <td data-th="Price">IDR {{ $details['price'] }}</td>
                         <td data-th="Quantity">
                             <input type="number" value="{{ $details['quantity'] }}" class="form-control quantity cart_update" min="1" />
                         </td>
-                        <td data-th="Subtotal" class="text-center">${{ $details['price'] * $details['quantity'] }}</td>
+                        <td data-th="Subtotal" class="text-center">IDR {{ $details['price'] * $details['quantity'] }}</td>
                         <td class="actions" data-th="">
                             <button class="btn btn-danger btn-sm cart_remove"><i class="fa fa-trash-o"></i> Delete</button>
                         </td>
@@ -66,9 +66,13 @@
                 @endforeach
             @endif
         </tbody>
-        <tfoot>
+        <tfoot class="table-dark">
             <tr>
-                <td colspan="5" class="text-right"><h3><strong>Total ${{ $total }}</strong></h3></td>
+                <td></td>
+                <td></td>
+                <td><h5><strong>Total:</strong></h5></td>
+                <td class="text-center"><h5><strong>IDR {{ $total }}</strong></h5></td>
+                <td></td>
             </tr>
         </tfoot>
         </table>
