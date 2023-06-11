@@ -120,8 +120,8 @@
         <h4 class="col-md-6 mb-3">Payment</h4>
             <select class="form-select" name="paymentMethod" id="paymentMethod" required>
                     <option value="debit" selected>Debit</option>
-                    <option value="virtualccount" selected>Virtual Account</option>
-                    <option value="gopay" selected>Gopay</option>
+                    <option value="virtualccount" selected>Bank Transfer</option>
+                    <option value="gopay" selected>GoPay</option>
             </select>
         </div>
         

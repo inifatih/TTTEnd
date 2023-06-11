@@ -1,4 +1,16 @@
 /*help*/
 section {
-    padding: 75px 200px;
+    padding: 50px 200px;
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 20px; /* Mengatur indentasi ke kiri */
+    margin-top: 10px; /* Mengatur jarak atas */
+    margin-bottom: 10px; /* Mengatur jarak bawah */
+  }
+
+  ol li {
+    margin-bottom: 5px; /* Mengatur jarak antara item daftar */
+    margin-left: 12px; /* Mengatur jarak antara item daftar */
   }

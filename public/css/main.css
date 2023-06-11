@@ -317,7 +317,7 @@ ul{
 }
 .footer-col a{
   font-size: 12px;
-  text-transform: capitalize;
+  text-transform: none;
   color: #000;
   text-decoration: none;
   font-weight: 300;

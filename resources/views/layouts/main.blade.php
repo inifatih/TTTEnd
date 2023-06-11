@@ -85,8 +85,8 @@
       <div class="container">
         <div class="row">
           <div class="footer-col">
-            <h4>TTTend</h4>
-            <a>Pada proyek website ini, kami memilih tema e-commerce. Tema tersebut diimplementasikan melalui pembuatan website yang menjual berbagai jenis baju bagi semua orang. Penamaan TTTend merupakan singkatan dari “Try Till the End” yang dapat diartikan sebagai ajakan untuk mencoba berbagai macam pakaian dan menemukan pakaian yang sesuai dengan selera dan kebutuhan pelanggan. Website ini mencoba mendorong pelanggan untuk tidak berhenti mencoba pakaian sampai mereka menemukan yang paling cocok untuk mereka. Tujuan dari proyek ini adalah untuk membantu masyarakat yang menginginkan berbelanja pakaian tanpa harus pergi ke toko fisik dengan mengandalkan kemudahan dan kenyamanan berbelanja yang bisa dilakukan kapan saja dan dimana saja. Dengan semangat "Try Till the End", kami berharap dapat memberikan pengalaman berbelanja yang positif dan memuaskan bagi para pelanggannya.
+            <h4>TTTEnd</h4>
+            <a>TTTEnd merupakan singkatan dari “Try Till the End” yang dapat diartikan sebagai ajakan untuk mencoba berbagai macam pakaian sampai kita menemukan pakaian yang paling cocok untuk dikenakan. Kami berkomitmen untuk memberikan pengalaman berbelanja yang mudah dan nyaman bagi pelanggan.
 </a>
           </div>
           <div class="footer-col">
