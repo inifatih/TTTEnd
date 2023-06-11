@@ -1,18 +1,11 @@
 @extends('layouts.main')
 @section('container')
 <link rel="stylesheet" href="{{asset('css/profile.css')}}">
+<link href="{{ asset('boots/css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="{{ asset('boots/js/bootstrap.bundle.min.js') }}" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <section id="account" class="account-section">
         <div class="wrapper">
-          <div class="title">Account</div>
-          <nav class="nav-text">
-            <div class="profileBar">
-              <button><a href="profile">Profile</a></button>
-            </div>
-            <div class="orderBar">
-              <button><a href="order">Orders</a></button>
-            </div>
-          </nav>
-      
+          <div class="title mt-3 mb-3">Profile Card</div>
           <div class="profilAkun">
             <span class="nama">Name</span>
             <span class="textDataDiri">{{ auth()->user()->name }}</span>
@@ -21,31 +14,6 @@
             <span class="email">Email</span>
             <span class="textDataDiri">{{ auth()->user()->email }}</span>
           </div>
-      
-          <form action="#" id="addressForm" class="hidden">
-            <div class="formField">
-              <label for="address">Address</label>
-              <input type="text" id="address" name="address" required>
-            </div>
-            <div class="formField">
-              <label for="city">Recipient's Name</label>
-              <input type="text" id="recipient" name="recipient" required>
-            </div>
-            <div class="formField">
-              <label for="state">Phone Number</label>
-              <input type="text" id="noTelp" name="noTelp" required>
-            </div>
-            <div class="formField">
-              <label for="postalCode">Postal Code</label>
-              <input type="text" id="postalCode" name="postalCode" required>
-            </div>
-            <div class="formField">
-                <input type="submit" value="Create New Address">
-              </div>
-            </form>
-            <div class="field">
-              <input type="submit" value="Add New Address" id="addAddressButton">
-            </div>
             <div class="logoutbar">
                 <form action="/logout" method="post">
                   @csrf

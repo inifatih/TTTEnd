@@ -23,6 +23,8 @@
 }
 </style>
 <section>
+<form action="/makeOrder" method="post">
+    @csrf
     <div class="top-button">
         <a class="buttons" href="/posts" > <i class="fa fa-arrow-left"></i> Back to Shop</a>
     </div>
@@ -66,12 +68,12 @@
                 @endforeach
             @endif
         </tbody>
-        <tfoot class="table-dark">
+        <tfoot>
             <tr>
                 <td></td>
                 <td></td>
-                <td><h5><strong>Total:</strong></h5></td>
-                <td class="text-center"><h5><strong>IDR {{ $total }}</strong></h5></td>
+                <td></td>
+                <td class="text-center"><h5><strong>Total IDR {{ $total }}</strong></h5></td>
                 <td></td>
             </tr>
         </tfoot>
@@ -83,75 +85,60 @@
         <form class="needs-validation" novalidate>
             <div class="row">
             <div class="col-md-6 mb-3">
-                <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <label for="firstName">Full name</label>
+                <input type="text" class="form-control" id="name" placeholder="" value="{{ old('name')}}" required name="name">
                 <div class="invalid-feedback">
                 Valid first name is required.
                 </div>
             </div>
             <div class="col-md-6 mb-3">
-                <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                Valid last name is required.
-                </div>
-            </div>
-            <div class="mb-3">
           <label for="phone">Phone number</label>
           <div class="input-group">
-            <input type="text" class="form-control" id="phone" placeholder="08xxxxxxxxxx" required>
+            <input type="text" class="form-control" id="phone" placeholder="08xxxxxxxxxx" value="{{ old('phone')}}" required name="phone">
             <div class="invalid-feedback" style="width: 100%;">
               Valid phone number is required.
             </div>
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="col-md-6 mb-3">
           <label for="email">Email <span class="text-muted">(Optional)</span></label>
-          <input type="email" class="form-control" id="email" placeholder="you@example.com">
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" value="{{ old('email')}}" name="email">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="col-md-6 mb-3">
           <label for="address">Address</label>
-          <input type="text" class="form-control" id="address" placeholder="Jl. Contoh no.123" required>
+          <input type="text" class="form-control" id="address" placeholder="Jl. Contoh no.123" value="{{ old('address')}}" required name="address">
           <div class="invalid-feedback">
             Please enter your shipping address.
           </div>
         </div>
 
-        <h4 class="mb-3">Payment</h4>
-
-          <div class="custom-control custom-radio">
-            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="debit">Debit Card</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="debit">Virtual Account</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="paypal">PayPal</label>
-          </div>
+        <h4 class="col-md-6 mb-3">Payment</h4>
+            <select class="form-select" name="paymentMethod" id="paymentMethod" required>
+                    <option value="debit" selected>Debit</option>
+                    <option value="virtualccount" selected>Virtual Account</option>
+                    <option value="gopay" selected>Gopay</option>
+            </select>
         </div>
         
         <hr class="mb-4">
-        <form action="/checkout" method="post">
             <button class="btn btn-primary btn-lg btn-block" type="submit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                     <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
                 </svg>
-                Checkout
+                Order
             </button>
-        </form>
+        
     </div>
     </div>
     </div>
   </div>
+  </form>
 </section>   
 <script type="text/javascript">
     $(".cart_update").change(function (e) {

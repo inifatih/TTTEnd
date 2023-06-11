@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\CartController;
 use App\Models\Post;
 use App\Models\Content;
 use App\Models\Section;
@@ -11,7 +11,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\DashboardContentController;
-
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,12 +67,6 @@ Route::get('/sections/{section:slug}', function(Section $section){
         'title' => $section->name,
         'posts' => $section->posts->load('category', 'section'),
         'section' => $section->name
-    ]);
-});
-
-Route::get('/order', function () {
-    return view('order', [
-        "title" => "Order"
     ]);
 });
 
@@ -135,3 +129,6 @@ Route::resource('/dashboard/contents', DashboardContentController::class)->middl
 Route::get('add-to-cart/{post:id}', [PostController::class, 'addToCart'])->name('add_to_cart');
 Route::patch('update-cart', [PostController::class, 'update'])->name('update_cart');
 Route::delete('remove-from-cart', [PostController::class, 'remove'])->name('remove_from_cart');
+
+Route::post('makeOrder', [CartController::class, 'order'])->name('order');
+Route::get('/order', [OrderController::class, 'index'])->name('listOrder');

@@ -40,6 +40,7 @@
         <div class="navigation-items">
           <!-- <input class="search" type="text" name="search" placeholder="Search..."> -->
           <a href="/posts" >SHOP</a>
+          <a href="/order" >ORDERS</a>
           <a href="/help" >HELP</a>
           @auth
             <a href="/profile">{{ auth()->user()->username }}</a>
@@ -85,7 +86,8 @@
         <div class="row">
           <div class="footer-col">
             <h4>TTTend</h4>
-            <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</a>
+            <a>Pada proyek website ini, kami memilih tema e-commerce. Tema tersebut diimplementasikan melalui pembuatan website yang menjual berbagai jenis baju bagi semua orang. Penamaan TTTend merupakan singkatan dari “Try Till the End” yang dapat diartikan sebagai ajakan untuk mencoba berbagai macam pakaian dan menemukan pakaian yang sesuai dengan selera dan kebutuhan pelanggan. Website ini mencoba mendorong pelanggan untuk tidak berhenti mencoba pakaian sampai mereka menemukan yang paling cocok untuk mereka. Tujuan dari proyek ini adalah untuk membantu masyarakat yang menginginkan berbelanja pakaian tanpa harus pergi ke toko fisik dengan mengandalkan kemudahan dan kenyamanan berbelanja yang bisa dilakukan kapan saja dan dimana saja. Dengan semangat "Try Till the End", kami berharap dapat memberikan pengalaman berbelanja yang positif dan memuaskan bagi para pelanggannya.
+</a>
           </div>
           <div class="footer-col">
             <h4>Help</h4>

@@ -24,6 +24,16 @@ class Post extends Model
         return $this->belongsTo(Section::class);
     }
 
+    public function cart()
+    {
+        return $this->hasMany(Cart::class);
+    }
+
+    public function orderDetail()
+    {
+        return $this->hasMany(OrderDetail::class);
+    }
+
     public function getRouteKeyName(){
         return 'slug';
     }

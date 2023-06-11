@@ -18,7 +18,12 @@
                 <div class="product-configuration">
                     <div class="product-price">
                         <span>IDR {{ $post->price }}</span>
-                        <a href="{{ route('add_to_cart', $post->id) }}" class="addtocart-btn" class="text-decoration-none" role="button">Add to cart</a>
+                        <form action="{{ route('add_to_cart', $post->id) }}" method="get">
+                            @csrf
+                            <button class="addtocart-btn" class="text-decoration-none" type="submit">
+                                Add to cart
+                            </button>
+                        </form>
                     </div>
                 </div>
         </main>

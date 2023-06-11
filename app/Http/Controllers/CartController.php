@@ -6,7 +6,8 @@ use App\Models\Cart;
 use App\Models\Post;
 use App\Http\Requests\StoreCartRequest;
 use App\Http\Requests\UpdateCartRequest;
-use Clockwork\Request\Request;
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
@@ -17,9 +18,35 @@ class CartController extends Controller
      public function index()
      {
         $user = Auth::user();
-        $cart = Cart::where('user_id', $user->id)->first();
 
+        $cart = Cart::where('user_id', $user->id)->first();
         return view('cart', compact('cart'));
+    }
+
+    public function order(Request $request)
+    {
+        $user = User::find(Auth::id());
+        
+        $cart = session()->get('cart', []);
+
+        $order = $user->order()->create([
+            'order_name' => $request->input('name'),
+            'order_phone' => $request->input('phone'),
+            'order_email' => $request->input('email'),
+            'order_address' => $request->input('address'),
+            'order_payment' => $request->input('paymentMethod'),
+            'order_status' => 'On Process',
+        ]);
+
+        foreach(session('cart') as $id => $details){
+            $order->orderDetail()->create([
+                'post_id' => $id,
+                'quantity' => $details['quantity']
+            ]);
+        }
+
+
+        return redirect('/');
     }
 
 
@@ -39,7 +66,7 @@ class CartController extends Controller
         Cart::create([
             'user_id' => Auth::user()->id,
             // 'post_id' => $request->post_id,
-            'qty' => 1
+            'quantity' => 1
         ]);
         return redirect('/main');
     }
