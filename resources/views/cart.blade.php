@@ -36,7 +36,7 @@
                     <th style="width:50%"><h5><strong>Name</strong></h5></th>
                     <th style="width:10%"><h5><strong>Price</strong></h5></th>
                     <th style="width:8%"><h5><strong>Quantity</strong></h5></th>
-                    <th style="width:22%" class="text-center"><h5><strong>Name</strong></h5></th>
+                    <th style="width:22%" class="text-center"><h5><strong>Subtotal</strong></h5></th>
                     <th style="width:10%"></th>
                 </tr>
             </thead>
