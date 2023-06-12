@@ -48,7 +48,7 @@
             <a href="/login" >LOGIN</a>
           @endauth
           <a class="cart-btn" href="/cart">
-            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            <i class="fa fa-shopping-bag"></i>
             <span class="badge badge-pill badge-danger">({{ count((array) session('cart')) }})</span>
           </a>
           </div>
@@ -79,15 +79,12 @@
     
     @yield('container')
 
-
-    
     <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="footer-col">
             <h4>TTTEnd</h4>
-            <a>TTTEnd merupakan singkatan dari “Try Till the End” yang dapat diartikan sebagai ajakan untuk mencoba berbagai macam pakaian sampai kita menemukan pakaian yang paling cocok untuk dikenakan. Kami berkomitmen untuk memberikan pengalaman berbelanja yang mudah dan nyaman bagi pelanggan.
-</a>
+            <a>TTTEnd merupakan singkatan dari “Try Till the End” yang dapat diartikan sebagai ajakan untuk mencoba berbagai macam pakaian sampai kita menemukan pakaian yang paling cocok untuk dikenakan. Kami berkomitmen untuk memberikan pengalaman berbelanja yang mudah dan nyaman bagi pelanggan.</a>
           </div>
           <div class="footer-col">
             <h4>Help</h4>

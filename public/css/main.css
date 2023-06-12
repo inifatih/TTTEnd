@@ -277,7 +277,7 @@ header .search:hover{
 	padding:0;
 	box-sizing: border-box;
 }
-.container{
+.footer .container{
   max-width: 1170px;
   background-color: #f4efe9;
   margin: auto;

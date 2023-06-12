@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->string('order_name');
-            $table->integer('order_phone');
+            $table->bigInteger('order_phone');
             $table->string('order_email');
             $table->string('order_address');
             $table->string('order_payment');

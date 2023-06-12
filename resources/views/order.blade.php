@@ -3,11 +3,9 @@
 <link href="{{ asset('boots/css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 <script src="{{ asset('boots/js/bootstrap.bundle.min.js') }}" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<section>
-
-
+<section class="container mt-5 bg-transparent">
     <div class="container py-5 bg-transparent">
-      <div class="text-center py-5 mt-5">
+      <div class="text-center py-5">
         <strong><h3>Order History</h3></strong>
       </div>
     <table id="cart" class="table table-hover table-condensed">
@@ -31,7 +29,12 @@
               @foreach($order->orderDetail()->with('post')->get() as $orderDetail)
               <ul>
                 <li>
-                  <img src="{{ asset('storage')}}/{{ $orderDetail->post->image  }}" class="img-fluid">
+                  <img src="{{ asset('storage')}}/{{ $orderDetail->post->image  }}" class="img-thumbnail">
+                  <style>
+                    .img-thumbnail {
+                      max-width: 200px;
+                    }
+                  </style>
                 </li>
                 <li>
                   <div>{{ $orderDetail->post->title }}</div>
@@ -73,6 +76,7 @@
     </table>
     </div>
 </section>
+@endsection
         <!-- <script>
             const addAddressButton = document.getElementById("addAddressButton");
             const addressForm = document.getElementById("addressForm");
@@ -95,4 +99,3 @@
             });
 
         </script> -->
-@endsection

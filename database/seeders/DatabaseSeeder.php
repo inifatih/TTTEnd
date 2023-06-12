@@ -36,10 +36,20 @@ class DatabaseSeeder extends Seeder
             'name' => 'Bottoms',
             'slug' => 'bottoms',
         ]);
+
+        Category::create([
+            'name' => 'Sweaters',
+            'slug' => 'sweaters',
+        ]);
         
         Category::create([
             'name' => 'Jackets',
             'slug' => 'jackets',
+        ]);
+
+        Category::create([
+            'name' => 'Accessories',
+            'slug' => 'accessories',
         ]);
 
         //section
@@ -73,15 +83,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Post::create([
-            'title' => 'Kaos Lengan Pendek Bergaris',
-            'slug' => 'kaos-lengan-pendek-bergaris',
-            'desc' => 'Kaos lengan pendek dengan bahan berkualitas yang nyaman digunakan pada kegiatan sehari-hari.',
-            'price' => '100',
-            'category_id' => '1',
-            'section_id' => '1'
-        ]);
-
-        Post::create([
             'title' => 'Celana Pendek',
             'slug' => 'celana-pendek',
             'desc' => 'Celana pendek dengan bahan berkualitas yang nyaman digunakan pada kegiatan sehari-hari.',
@@ -100,9 +101,9 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Post::create([
-            'title' => 'Celana Panjang Denim',
-            'slug' => 'celana-panjang-denim',
-            'desc' => 'Celana panjang dengan bahan denim berkualitas yang nyaman digunakan pada kegiatan sehari-hari.',
+            'title' => 'Celana Panjang Cargo',
+            'slug' => 'celana-panjang-cargo',
+            'desc' => 'Celana panjang cargo berkualitas yang nyaman digunakan dan fungsional untuk kegiatan sehari-hari.',
             'price' => '150',
             'category_id' => '2',
             'section_id' => '1'
@@ -115,24 +116,6 @@ class DatabaseSeeder extends Seeder
             'price' => '100',
             'category_id' => '3',
             'section_id' => '1'
-        ]);
-
-        Post::create([
-            'title' => 'Celana Panjang Crop',
-            'slug' => 'celana-panjang-crop',
-            'desc' => 'Celana panjang dengan bahan berkualitas yang nyaman digunakan pada kegiatan sehari-hari.',
-            'price' => '150',
-            'category_id' => '2',
-            'section_id' => '2'
-        ]);
-
-        Post::create([
-            'title' => 'Kaos Lengan Pendek Crop',
-            'slug' => 'kaos-lengan-pendek-crop',
-            'desc' => 'Kaos dengan bahan berkualitas yang nyaman digunakan pada kegiatan sehari-hari.',
-            'price' => '100',
-            'category_id' => '2',
-            'section_id' => '2'
         ]);
 
 
