@@ -6,11 +6,11 @@
         </div>
         <div class="container">
             <h3 class="title">Categories</h3>
-            <div class="product-container">
+            <div class="category-container">
               @foreach ($categories as $category)
                 <ul>
                     <li>
-                        <h3><a class="text-decoration-none" href="/categories/{{ $category->slug }}">{{ $category->name }}</a></h3>
+                        <h3><a class="title-link" href="/categories/{{ $category->slug }}">{{ $category->name }}</a></h3>
                     </li>
                 </ul>
               @endforeach

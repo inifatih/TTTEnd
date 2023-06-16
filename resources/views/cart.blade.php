@@ -15,66 +15,71 @@
     text-decoration: none;
     color: #000;
 }
+.container-table{
+    margin-top: 40px;
+    overflow-x: auto;
+}
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1040px){
 .top-button{
     margin-left:0;
 }
 }
 </style>
 <section>
+    <!-- <div class="top-button">
+        <a class="buttons" href="/posts" > <i class="fa fa-arrow-left"></i> Shop</a>
+    </div> -->
 <form action="/makeOrder" method="post">
     @csrf
-    <div class="top-button">
-        <a class="buttons" href="/posts" > <i class="fa fa-arrow-left"></i> Shop</a>
-    </div>
-        <div class="container-xl py-5 mt-5 bg-transparent">        
-        <div class="container-xl h-100 mt-3 bg-transparent">
-        <table id="cart" class="table table-hover table-condensed">
-            <thead>
-                <tr>
-                    <th style="width:50%"><h5><strong>Name</strong></h5></th>
-                    <th style="width:10%"><h5><strong>Price</strong></h5></th>
-                    <th style="width:8%"><h5><strong>Quantity</strong></h5></th>
-                    <th style="width:22%" class="text-center"><h5><strong>Subtotal</strong></h5></th>
-                    <th style="width:10%"></th>
-                </tr>
-            </thead>
-            <tbody>
-                @php $total = 0 @endphp
-                @if(session('cart'))
-                    @foreach(session('cart') as $id => $details)
-                        @php $total += $details['price'] * $details['quantity'] @endphp
-                        <tr data-id="{{ $id }}">
-                            <td data-th="Product">
-                                <div class="row">
-                                    <div class="col-sm-3 hidden-xs"><img src="{{ asset('storage')}}/{{ $details['image']  }}" class="img-fluid"></div>
-                                    <div class="col-sm-9">
-                                        <h4 class="nomargin">{{ $details['title'] }}</h4>
+
+    <div class="container-xl py-5 mt-5 bg-transparent">        
+        <div class="container-table">
+            <table id="cart" class="table table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th style="width:50%"><h5><strong>Name</strong></h5></th>
+                        <th style="width:10%"><h5><strong>Price</strong></h5></th>
+                        <th style="width:8%"><h5><strong>Quantity</strong></h5></th>
+                        <th style="width:22%" class="text-center"><h5><strong>Subtotal</strong></h5></th>
+                        <th style="width:10%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @php $total = 0 @endphp
+                    @if(session('cart'))
+                        @foreach(session('cart') as $id => $details)
+                            @php $total += $details['price'] * $details['quantity'] @endphp
+                            <tr data-id="{{ $id }}">
+                                <td data-th="Product">
+                                    <div class="row">
+                                        <div class="col-sm-3 hidden-xs"><img src="{{ asset('storage')}}/{{ $details['image']  }}" class="img-fluid"></div>
+                                        <div class="col-sm-9">
+                                            <h4 class="nomargin">{{ $details['title'] }}</h4>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td data-th="Price">IDR {{ $details['price'] }}</td>
-                            <td data-th="Quantity">
-                                <input type="number" value="{{ $details['quantity'] }}" class="form-control quantity cart_update" min="1" />
-                            </td>
-                            <td data-th="Subtotal" class="text-center">IDR {{ $details['price'] * $details['quantity'] }}</td>
-                            <td class="actions" data-th="">
-                                <button class="btn btn-danger btn-sm cart_remove"><i class="fa fa-trash-o"></i> Delete</button>
-                            </td>
-                        </tr>
-                    @endforeach
-                @endif
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="text-center"><h5><strong>Total IDR {{ $total }}</strong></h5></td>
-                    <td></td>
-                </tr>
-            </tfoot>
+                                </td>
+                                <td data-th="Price">IDR {{ $details['price'] }}</td>
+                                <td data-th="Quantity">
+                                    <input type="number" value="{{ $details['quantity'] }}" class="form-control quantity cart_update" min="1" />
+                                </td>
+                                <td data-th="Subtotal" class="text-center">IDR {{ $details['price'] * $details['quantity'] }}</td>
+                                <td class="actions" data-th="">
+                                    <button class="btn btn-danger btn-sm cart_remove"><i class="fa fa-trash-o"></i> Delete</button>
+                                </td>
+                            </tr>
+                        @endforeach
+                    @endif
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-center"><h5><strong>Total IDR {{ $total }}</strong></h5></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
         <div class="container-xl py-5 bg-transparent">
@@ -115,12 +120,13 @@
             </div>
             </div>
 
-            <h4 class="col-md-6 mb-3">Payment</h4>
-                <select class="form-select" name="paymentMethod" id="paymentMethod" required>
-                        <option value="debit" selected>Debit</option>
-                        <option value="virtualccount" selected>Bank Transfer</option>
-                        <option value="gopay" selected>GoPay</option>
-                </select>
+            <div class="col-md-6 mb-3">
+            <label>Payment</label>
+            <select class="form-select" name="paymentMethod" id="paymentMethod" required>
+                    <option value="debit" selected>Debit</option>
+                    <option value="virtualccount" selected>Bank Transfer</option>
+                    <option value="gopay" selected>GoPay</option>
+            </select>
             </div>
             
             <hr class="mb-4">
@@ -135,7 +141,6 @@
         </div>
         </div>
     </div>
-  </div>
   </form>
 </section>   
 <script type="text/javascript">

@@ -6,7 +6,7 @@
       <ul>
         <li><a class="buttons" href="/"><i class="fa fa-arrow-left"></i> Home</a></li>
         <li><a class="buttons" href="/categories">Categories</a></li>
-        <li><a class="buttons" href="/sections">Section</a></li>
+        <li><a class="buttons" href="/sections">Sections</a></li>
       </ul>
     </div>
 

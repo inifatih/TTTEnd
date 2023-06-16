@@ -5,14 +5,14 @@
     <div class="top-button"><a class="buttons" href="/posts"><i class="fa fa-arrow-left"></i> Shop</a>
         </div>
         <div class="container">
-            <h3 class="title">Section</h3>
+            <h3 class="title">Sections</h3>
 
-            <div class="product-container">
+            <div class="category-container">
 
               @foreach ($sections as $section)
                 <ul>
                     <li>
-                        <h3><a href="/sections/{{ $section->slug }}">{{ $section->name }}</a></h3>
+                        <h3><a class="title-link" href="/sections/{{ $section->slug }}">{{ $section->name }}</a></h3>
                     </li>
                 </ul>
               @endforeach

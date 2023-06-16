@@ -4,7 +4,7 @@
     <section class="product">    
     <div class="top-button"><a class="buttons" href="/sections"><i class="fa fa-arrow-left"></i> Sections</a>
         <div class="container">
-            <h3 class="title">Section : {{ $section }}</h3>
+            <h3 class="title">Sections : {{ $section }}</h3>
 
             <div class="product-container">
 

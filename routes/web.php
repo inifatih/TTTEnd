@@ -104,9 +104,15 @@ Route::get('/cart', function () {
     ]);
 })->middleware('auth');
 
-Route::get('/checkout', function () {
-    return view('checkout');
-})->middleware('auth');
+// Route::get('/order', function () {
+//     return view('order', [
+//         "title" => "Orders"
+//     ]);
+// })->middleware('auth');
+
+// Route::get('/checkout', function () {
+//     return view('checkout');
+// })->middleware('auth');
 
 
 
@@ -131,4 +137,4 @@ Route::patch('update-cart', [PostController::class, 'update'])->name('update_car
 Route::delete('remove-from-cart', [PostController::class, 'remove'])->name('remove_from_cart');
 
 Route::post('makeOrder', [CartController::class, 'order'])->name('order');
-Route::get('/order', [OrderController::class, 'index'])->name('listOrder');
+Route::get('/order', [OrderController::class, 'index'])->middleware('auth')->name('listOrder');

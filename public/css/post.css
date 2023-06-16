@@ -92,7 +92,7 @@
     color: #fff;
   }
   /* Responsive */
-@media (max-width: 940px) {
+@media (max-width: 1040px) {
     .container {
       flex-direction: column;
       margin-top: 60px;
@@ -111,6 +111,9 @@
       right: 0;
       top: 10px;
       left: initial;
+    }
+    .back-button{
+      margin: 0px 0px 0px 0px;
     }
   }
    

@@ -15,7 +15,7 @@
     transition: all .2s linear;
     background-color: transparent;
     margin-bottom: 70px;
-    margin-left: 70px;
+    /* margin-left: 70px; */
 }
 
 .container .title{
@@ -25,6 +25,16 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     text-align: center;
+}
+
+.container .title-link{
+    text-decoration: underline;
+    color: #000;
+    margin: 70px 70px 70px 70px;
+}
+
+.container .category-container{
+    text-align: left;
 }
 
 .container .product-container{
@@ -68,5 +78,8 @@
 }
 .top-button{
     margin-left:0;
+}
+.container .title-link{
+    margin: 0px 0px 0px 0px;
 }
 }
